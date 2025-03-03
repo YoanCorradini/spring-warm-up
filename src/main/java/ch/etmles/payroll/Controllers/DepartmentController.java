@@ -26,7 +26,7 @@ public class DepartmentController {
     /* curl sample :
     curl -i -X POST localhost:8080/departments ^
         -H "Content-type:application/json" ^
-        -d "{\"name\": \"Russel George\", \"role\": \"gardener\"}"
+        -d "{\"name\": \"Manager\""}"
     */
     @PostMapping("/departments")
     Department newDepartment(@RequestBody Department newDepartment){
@@ -44,7 +44,7 @@ public class DepartmentController {
     /* curl sample :
     curl -i -X PUT localhost:8080/departments/2 ^
         -H "Content-type:application/json" ^
-        -d "{\"name\": \"Samwise Bing\", \"role\": \"peer-to-peer\"}"
+        -d "{\"name\": \"System Admin\""}"
      */
     @PutMapping("/departments/{id}")
     Department replaceDepartment(@RequestBody Department newDepartment, @PathVariable Long id) {
